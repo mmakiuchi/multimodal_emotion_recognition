@@ -14,9 +14,12 @@ This repository is organized as follows:
 
 - wav2vec: contains the scripts to extract wav2vec features from the speech files (these features are further used by the scripts in the `speech` folder).
 
-
-The speech model found in the folder `speech` was inspired by the AutoVC model. For more information on AutoVC, check their [github repository](https://github.com/auspicious3000/autovc) and [paper](https://arxiv.org/abs/1905.05879).
+## How to run the scripts
 
 For information on how to run the scripts step-by-step, please refer to `how_to.md`, and, for information on the requirements to run the scripts of this repository, please refer to `requirements.md`.
+
+## More information
+
+The speech model found in the folder `speech` was inspired by the AutoVC model. For more information on AutoVC, check their [github repository](https://github.com/auspicious3000/autovc) and [paper](https://arxiv.org/abs/1905.05879).
 
 For more information on the technical components of our method, on the results, and on the discussion of these results, please refer to our paper.
