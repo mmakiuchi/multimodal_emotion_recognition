@@ -18,7 +18,7 @@ This repository is organized as follows:
 
 ## Dataset
 
-We evaluated our method with the IEMOCAPdataset. Therefore, the scripts were written assuming it is possible to organize the data in 5 sessions, and according to the speaker's gender. To request access to the IEMOCAP dataset, and, to know more about this dataset, refer to the [IEMOCAP webpage](https://sail.usc.edu/iemocap/) .
+We evaluated our method with the IEMOCAP dataset. Therefore, the scripts were written assuming it is possible to organize the data in 5 sessions, and according to the speaker's gender. To request access to the IEMOCAP dataset, and, to know more about this dataset, refer to the [IEMOCAP webpage](https://sail.usc.edu/iemocap/) .
 
 ## How to run the scripts
 
