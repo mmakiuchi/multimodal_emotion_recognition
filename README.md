@@ -2,6 +2,8 @@
 
 This repository contains the code used to perform the training and the analysis of the models described in the paper "Multimodal Emotion Recognition with High-level Speech and Text Features" accepted in the ASRU 2021 conference.
 
+## Repository organization
+
 This repository is organized as follows:
 
 - aligner: contains a script used to extract phone alignment information using [Gentle](https://github.com/lowerquality/gentle). This information is further used by the scripts in the `speech` folder.
@@ -13,6 +15,10 @@ This repository is organized as follows:
 - text: contains the scripts to extract text features using pre-trained Transformer-based models, and to train a text emotion recognition model over these features.
 
 - wav2vec: contains the scripts to extract wav2vec features from the speech files (these features are further used by the scripts in the `speech` folder).
+
+## Dataset
+
+We evaluated our method with the IEMOCAPdataset. Therefore, the scripts were written assuming it is possible to organize the data in 5 sessions, and according to the speaker's gender. To request access to the IEMOCAP dataset, and, to know more about this dataset, refer to the [IEMOCAP webpage](https://sail.usc.edu/iemocap/) .
 
 ## How to run the scripts
 
