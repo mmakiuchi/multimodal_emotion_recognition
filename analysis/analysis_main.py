@@ -45,17 +45,17 @@ def main(analysis_options):
     sp_config, data_dirs = get_config()
 
     # weights of the pretrained speech and text models
-    sp_weight_fs = ["/gs/hs0/tga-shinoda/19M38350/code/autovc/cross_representation_asru/speech/results/fold1/last_checkpoint_neckdim_8.ckpt",
-                    "/gs/hs0/tga-shinoda/19M38350/code/autovc/cross_representation_asru/speech/results/fold2/last_checkpoint_neckdim_8.ckpt",
-                    "/gs/hs0/tga-shinoda/19M38350/code/autovc/cross_representation_asru/speech/results/fold3/last_checkpoint_neckdim_8.ckpt",
-                    "/gs/hs0/tga-shinoda/19M38350/code/autovc/cross_representation_asru/speech/results/fold4/last_checkpoint_neckdim_8.ckpt",
-                    "/gs/hs0/tga-shinoda/19M38350/code/autovc/cross_representation_asru/speech/results/fold5/last_checkpoint_neckdim_8.ckpt"]
+    sp_weight_fs = ["speech/results/fold1/last_checkpoint_neckdim_8.ckpt",
+                    "speech/results/fold2/last_checkpoint_neckdim_8.ckpt",
+                    "speech/results/fold3/last_checkpoint_neckdim_8.ckpt",
+                    "speech/results/fold4/last_checkpoint_neckdim_8.ckpt",
+                    "speechsresults/fold5/last_checkpoint_neckdim_8.ckpt"]
 
-    txt_weight_fs = ["/gs/hs0/tga-shinoda/19M38350/code/autovc/cross_representation_asru/text/txt_model_out/2021_08_06/new_data/bert-large-uncased_last_checkpoint_06-08-2021_14-10-56_fold_1.ckpt",
-                     "/gs/hs0/tga-shinoda/19M38350/code/autovc/cross_representation_asru/text/txt_model_out/2021_08_06/new_data/bert-large-uncased_last_checkpoint_06-08-2021_15-06-47_fold_2.ckpt",
-                     "/gs/hs0/tga-shinoda/19M38350/code/autovc/cross_representation_asru/text/txt_model_out/2021_08_06/new_data/bert-large-uncased_last_checkpoint_06-08-2021_16-10-03_fold_3.ckpt",
-                     "/gs/hs0/tga-shinoda/19M38350/code/autovc/cross_representation_asru/text/txt_model_out/2021_08_06/new_data/bert-large-uncased_last_checkpoint_06-08-2021_17-05-07_fold_4.ckpt",
-                     "/gs/hs0/tga-shinoda/19M38350/code/autovc/cross_representation_asru/text/txt_model_out/2021_08_06/new_data/bert-large-uncased_last_checkpoint_06-08-2021_18-01-18_fold_5.ckpt"]
+    txt_weight_fs = ["text/txt_model_out/bert-large-uncased_last_checkpoint_DD-MM-YYYY_HH-MM-SS_fold_1.ckpt",
+                     "text/txt_model_out/bert-large-uncased_last_checkpoint_DD-MM-YYYY_HH-MM-SS_fold_2.ckpt",
+                     "text/txt_model_out/bert-large-uncased_last_checkpoint_DD-MM-YYYY_HH-MM-SS_fold_3.ckpt",
+                     "text/txt_model_out/bert-large-uncased_last_checkpoint_DD-MM-YYYY_HH-MM-SS_fold_4.ckpt",
+                     "text/txt_model_out/bert-large-uncased_last_checkpoint_DD-MM-YYYY_HH-MM-SS_fold_5.ckpt"]
 
     # get the time string to identify the experiment
     now = datetime.datetime.now()

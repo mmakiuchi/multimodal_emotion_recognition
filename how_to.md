@@ -181,8 +181,9 @@ Then, you should generate pkl files for the speaker dependent folds, so that the
 We will assume that the spk dependent folds are in `speech/spk_dep_folds`.
 
 The analysis script outputs accuracy results and LDA plots for all the 5 folds.
-The speech and text models used for each fold are defined in the main function of analysis/analysis_main.py,
-and other model parameters are defined in analysis/config_helpers.py.
+
+The speech and text models used for each fold are defined in the main function of `analysis/analysis_main.py`,
+and other model parameters are defined in `analysis/config_helpers.py`.
 You should change these two scripts according to your experiments and model checkpoints.
 
 The input variables to `analysis/analysis_main.py` are:
