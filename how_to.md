@@ -93,13 +93,21 @@ with your alignment results, otherwise there will be errors when running the cod
 These directories will store speech model checkpoints and training logs.
 
 `cd speech`
+
 `mkdir results`
+
 `cd results`
+
 `mkdir fold1`
+
 `mkdir fold2`
+
 `mkdir fold3`
+
 `mkdir fold4`
+
 `mkdir fold5`
+
 `cd ../../`
 
 ### Extract the wav2vec features and save them in wav2vec/features/large-lv60/all_hidden_states
@@ -117,21 +125,31 @@ If you want to check or change the model's parameters, please refer to the scrip
 `python speech/main.py --reproduct_mode "free" --num_iters 500 --checkpoint_step 250`
 
 ### Reproducing the experiments with the small bottleneck (main experiments)
+
 `python speech/main.py --reproduct_mode "small" --train_dir "speech/folds/fold1/train" --test_dir "speech/folds/fold1/test" --out_dir "speech/results/fold1" --wav2vec_path "wav2vec/features/large-lv60/all_hidden_states"`
+
 `python speech/main.py --reproduct_mode "small" --train_dir "speech/folds/fold2/train" --test_dir "speech/folds/fold2/test" --out_dir "speech/results/fold2" --wav2vec_path "wav2vec/features/large-lv60/all_hidden_states"`
+
 `python speech/main.py --reproduct_mode "small" --train_dir "speech/folds/fold3/train" --test_dir "speech/folds/fold3/test" --out_dir "speech/results/fold3" --wav2vec_path "wav2vec/features/large-lv60/all_hidden_states"`
+
 `python speech/main.py --reproduct_mode "small" --train_dir "speech/folds/fold4/train" --test_dir "speech/folds/fold4/test" --out_dir "speech/results/fold4" --wav2vec_path "wav2vec/features/large-lv60/all_hidden_states"`
+
 `python speech/main.py --reproduct_mode "small" --train_dir "speech/folds/fold5/train" --test_dir "speech/folds/fold5/test" --out_dir "speech/results/fold5" --wav2vec_path "wav2vec/features/large-lv60/all_hidden_states"`
 
 # Training the text model
+
 `cd text`
+
 `mkdir txt_model_out`
+
 `cd ..`
 
 ### Extract text features and save them in text/last_hidden_state/bert-large-uncased
+
 `python text/feature_extractor.py --text_dir "/data/text" --label_dir "/data/labels"`
 
 ### Train the text model
+
 `python text/train_txt_model.py --label_dir "/data/labels"`
 
 # Evaluate results
@@ -155,6 +173,7 @@ The input variables to `analysis/analysis_main.py` are:
 
 
 # Extra: how to get pkl data from speaker dependent folds
+
 `python speech/make_pkl_data.py --mode "train" --spmel_dir "speech/spk_dep_folds/fold1/train" --dict_file "aligner/phone_dict.csv" --labels_dir "/data/labels" --wav_dir "/data/speech" --txt_dir "/data/text" --phone_dir "aligner/align_results"`
 
 `python speech/make_pkl_data.py --mode "train" --spmel_dir "speech/spk_dep_folds/fold2/train" --dict_file "aligner/phone_dict.csv" --labels_dir "/data/labels" --wav_dir "/data/speech" --txt_dir "/data/text" --phone_dir "aligner/align_results"`

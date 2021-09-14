@@ -30,20 +30,33 @@ The Gentle scripts should be stored in the `aligner` folder.
 
 # How to create an Anaconda environment to run the scripts in this repository
 Create an environment with name my_env (or any other name)
+
 `conda create -n my_env python=3.6.8`
 
 Activate the environment
+
 `conda activate my_env`
 
 Install the dependencies in the environment
+
 `conda install pytorch torchvision torchaudio cudatoolkit=10.1 -c pytorch`
+
 `conda install -c conda-forge transformers`
+
 `conda install -c conda-forge datasets`
+
 `conda install -c conda-forge umap-learn`
+
 `conda install -c conda-forge matplotlib`
+
 `conda install -c conda-forge scikit-learn`
+
 `conda install -c conda-forge librosa`
+
 `conda install -c conda-forge pysoundfile`
+
 `conda install -c conda-forge sox`
+
 `conda install -c omnia termcolor`
+
 `pip install Resemblyzer`
